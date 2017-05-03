@@ -29,42 +29,5 @@
             <artifactId>odata4j-cxf</artifactId>
             <version>0.7.0</version>
         </dependency>
-
-
-        <!--<dependency>-->
-            <!--<groupId>org.odata4j</groupId>-->
-            <!--<artifactId>odata4j-cxf</artifactId>-->
-            <!--<version>0.7.0</version>-->
-        <!--</dependency>-->
-        <dependency>
-            <groupId>org.apache.olingo</groupId>
-            <artifactId>olingo-odata2-core</artifactId>
-            <version>2.0.8</version>
-        </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.odata4j</groupId>-->
-            <!--<artifactId>odata4j-jersey</artifactId>-->
-            <!--<version>0.7.0</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>com.sun.jersey</groupId>-->
-                    <!--<artifactId>jersey-server</artifactId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.odata4j</groupId>-->
-            <!--<artifactId>odata4j-cxf</artifactId>-->
-            <!--<version>0.7.0</version>-->
-            <!--&lt;!&ndash;<exclusions>&ndash;&gt;-->
-                <!--&lt;!&ndash;<exclusion>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<groupId>com.sun.jersey</groupId>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<artifactId>jersey-server</artifactId>&ndash;&gt;-->
-                <!--&lt;!&ndash;</exclusion>&ndash;&gt;-->
-            <!--&lt;!&ndash;</exclusions>&ndash;&gt;-->
-        <!--</dependency>-->
-
-
     </dependencies>
 </project>
