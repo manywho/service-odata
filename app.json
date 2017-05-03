@@ -1,0 +1,7 @@
+{
+  "name": "ManyWho OData Service",
+  "description": "A plugin that allows your ManyWho Flows to integrate with an OData service",
+  "repository": "https://github.com/manywho/service-odata",
+  "logo": "https://s3.amazonaws.com/manywho-service-assets/icons/service-odata.png",
+  "keywords": ["manywho", "odata", "plugin", "workflow"]
+}
