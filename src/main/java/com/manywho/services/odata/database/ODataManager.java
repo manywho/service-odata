@@ -5,8 +5,8 @@ import com.manywho.sdk.api.run.elements.type.MObject;
 import com.manywho.sdk.api.run.elements.type.ObjectDataType;
 import com.manywho.sdk.services.utils.Streams;
 import com.manywho.services.odata.ApplicationConfiguration;
+import com.manywho.services.odata.odata4j.ODataConsumerFactory;
 import org.odata4j.consumer.ODataConsumer;
-import org.odata4j.consumer.ODataConsumers;
 import org.odata4j.core.OEntity;
 import org.odata4j.core.OQueryRequest;
 
@@ -19,7 +19,7 @@ import static com.manywho.services.odata.database.ODataOptions.createSelect;
 public class ODataManager {
     public MObject find(ApplicationConfiguration configuration, ObjectDataType objectDataType, String id) {
         // Fetch the OData entity, using the entity name and key given in the request
-        OEntity entity = ODataConsumers.create(configuration.getBaseUrl())
+        OEntity entity = ODataConsumerFactory.create(configuration)
                 .getEntity(objectDataType.getDeveloperName(), id)
                 .execute();
 
@@ -27,7 +27,7 @@ public class ODataManager {
     }
 
     public List<MObject> findAll(ApplicationConfiguration configuration, ObjectDataType objectDataType, ListFilter filter) {
-        ODataConsumer consumer = ODataConsumers.create(configuration.getBaseUrl());
+        ODataConsumer consumer = ODataConsumerFactory.create(configuration);
 
         // Build the OData request, using any filters passed in by the Flow
         OQueryRequest<OEntity> oQueryRequest = consumer.getEntities(objectDataType.getDeveloperName())

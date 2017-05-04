@@ -9,6 +9,7 @@ import com.manywho.sdk.api.describe.DescribeServiceRequest;
 import com.manywho.sdk.api.draw.elements.type.TypeElement;
 import com.manywho.sdk.services.types.TypeProvider;
 import com.manywho.services.odata.ApplicationConfiguration;
+import com.manywho.services.odata.odata4j.ODataConsumerFactory;
 import org.core4j.Enumerable;
 import org.odata4j.consumer.ODataConsumer;
 import org.odata4j.consumer.ODataConsumers;
@@ -34,7 +35,11 @@ public class ODataTypeProvider implements TypeProvider<ApplicationConfiguration>
 
     @Override
     public List<TypeElement> describeTypes(ApplicationConfiguration configuration, DescribeServiceRequest describeServiceRequest) {
-        ODataConsumer consumer = ODataConsumers.create(configuration.getBaseUrl());
+        if (configuration.getBaseUrl() == null) {
+            return Lists.newArrayList();
+        }
+
+        ODataConsumer consumer = ODataConsumerFactory.create(configuration);
 
         List<TypeElement> typeElements = Lists.newArrayList();
 
