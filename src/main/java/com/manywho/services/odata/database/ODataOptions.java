@@ -19,7 +19,7 @@ class ODataOptions {
 
         if (filter.hasOrderByPropertyDeveloperName()) {
             if (filter.hasOrderByDirectionType()) {
-                orderBy = String.format("%s %s", filter.getOrderByPropertyDeveloperName(), filter.getOrderByDirectionType().toLowerCase());
+                orderBy = String.format("%s %s", filter.getOrderByPropertyDeveloperName(), filter.getOrderByDirectionType().toString().toLowerCase());
             } else {
                 orderBy = filter.getOrderByPropertyDeveloperName();
             }
